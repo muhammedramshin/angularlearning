@@ -11,10 +11,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import { MenuComponent } from './menu/menu.component';
 import { from } from 'rxjs';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DishdetailComponent
   ],
   imports: [
     BrowserModule,
