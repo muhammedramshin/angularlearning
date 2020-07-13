@@ -15,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MenuComponent } from './menu/menu.component';
 import { from } from 'rxjs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -51,6 +52,7 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     MatButtonModule,
     AppRoutingModule,
     MatDialogModule,
