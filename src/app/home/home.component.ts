@@ -19,17 +19,14 @@ leader:Leader;
     private promotionservice: PromotionService, private leaderservice: LeaderService) { }
 
   ngOnInit() {
-    this.dishservice.getFeaturedDish()
-    .then(dish => this.dish = dish);
     
+    this.dishservice.getFeaturedDish().subscribe(dishes => this.dish = dishes)
 
-    this.promotionservice.getFeaturedPromotion()
-    .then(promotion => this.promotion = promotion);
+    
+this.promotionservice.getFeaturedPromotion().subscribe(promotion =>this.promotion = promotion)
+   
 
-    this.leaderservice.getFeaturedLeader()
-    .then(leader => this.leader = leader);
-
-
+    this.leaderservice.getFeaturedLeader().subscribe(leader => this.leader = leader);
   }
 
 }
