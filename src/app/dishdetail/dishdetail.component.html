@@ -54,9 +54,42 @@
               <span matLine> -- {{cmd.author}} {{cmd.date | date}}</span>
               
             </mat-list-item>
+            <mat-list-item *ngIf='dishForm.valid'>
+              <span matLine> {{dishForm.value.comment}} </span><br>
+              <span matLine> {{dishForm.value.rating}} Stars </span><br>
+              <span matLine> -- {{dishForm.value.author}} </span><br>
+            </mat-list-item>
           </mat-list>
         </mat-card-content>
+        <form [formGroup]="dishForm" (ngSubmit)="onSubmit()" >
+  
+          
         
+          
+          <mat-form-field class="full-width">
+            <input matInput type="text" formControlName="author" placeholder="Name" required>
+            <mat-error *ngIf="formErrors.author">{{formErrors.author}}</mat-error>
+          
+          </mat-form-field>
+          
+          <table class="form-size">
+            <td>
+              <mat-slider  formControlName="rating" thumbLabel tickInterval="1" min="1" max="5" step="1" value="5"></mat-slider>
+            </td>
+            </table>
+          
+              <mat-form-field class="full-width">
+                <textarea matInput formControlName="comment" placeholder="Your Comment" rows=12></textarea>
+                <mat-error *ngIf="formErrors.comment">{{formErrors.comment}}</mat-error>
+              </mat-form-field>
+            
+              
+            
+          <p>
+            <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="!dishForm.valid">Submit</button>
+      
+          </p>
+        </form>
       </mat-card>
     </div>
 

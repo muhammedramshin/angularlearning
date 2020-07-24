@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import {DishService} from './services/dish.service';
 import {PromotionService} from './services/promotion.service';
-
+import {MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -62,7 +62,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatSelectModule,
     MatSlideToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule
     
   ],
   entryComponents: [
