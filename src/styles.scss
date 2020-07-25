@@ -40,3 +40,10 @@ $background-pale: #D1C4E9;
 .text-floral-white{
   color: white;
 }
+
+.highlight {
+  background-color: $background-pale;
+  border: 1px solid $background-dark;
+  z-index: 1;
+  transform: scale(1.01);
+}
