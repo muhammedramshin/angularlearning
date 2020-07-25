@@ -6,9 +6,9 @@
     fxLayoutGap="10px" 
     fxLayoutGap.xs="0">
 
-  <div fxFlex="40">
+  
     
-    <div fxFlex *ngIf="dish">
+    <div fxFlex="40" *ngIf="dish" [@visibility]="visibility">
       <mat-card>
         <mat-card-header>
           <mat-card-title>
@@ -40,12 +40,12 @@
       <h2>Error</h2>
       <h4>{{errMess}}</h4>
     </div>
-  </div>
+  
 
-  <div fxFlex="40">
+ 
    
     
-    <div fxFlex *ngIf="dish">
+    <div fxFlex="40" *ngIf="dish" [@visibility]="visibility">
       <mat-card>
         <mat-card-header>
           <mat-card-title>
@@ -101,6 +101,6 @@
     </div>
 
 
-  </div>
+  
 
 </div>
