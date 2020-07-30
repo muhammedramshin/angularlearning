@@ -68,11 +68,10 @@
             </mat-list-item>
           </mat-list>
         </mat-card-content>
-        <form [formGroup]="dishForm" (ngSubmit)="onSubmit()" >
-  
-          
         
-          
+        
+        
+        <form [formGroup]="dishForm" (ngSubmit)="onSubmit()" >          
           <mat-form-field class="full-width">
             <input matInput type="text" formControlName="author" placeholder="Name" required>
             <mat-error *ngIf="formErrors.author">{{formErrors.author}}</mat-error>
@@ -89,14 +88,12 @@
                 <textarea matInput formControlName="comment" placeholder="Your Comment" rows=12></textarea>
                 <mat-error *ngIf="formErrors.comment">{{formErrors.comment}}</mat-error>
               </mat-form-field>
-            
-              
-            
           <p>
             <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="!dishForm.valid">Submit</button>
       
           </p>
         </form>
+        
       </mat-card>
     </div>
 

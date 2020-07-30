@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import 'hammerjs';
+import{FeedbackService} from  './services/feedback.service';
 import {DishService} from './services/dish.service';
 import {PromotionService} from './services/promotion.service';
 import {MatSliderModule} from '@angular/material/slider';
@@ -75,7 +76,7 @@ import { HighlightDirective } from './directives/highlight.directive';
   entryComponents: [
     LoginComponent
 ],
-  providers: [DishService,PromotionService,LeaderService,{provide: 'BaseURL', useValue: baseURL}],
+  providers: [DishService,PromotionService,LeaderService,FeedbackService,{provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

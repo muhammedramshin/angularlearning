@@ -118,12 +118,10 @@ validationMessages = {
   
 
   onSubmit() {
-   
     var d = new Date();
     this.dishForm.value.date = d.toISOString();
-   
-    
     this.dishcopy.comments.push(this.dishForm.value);
+   
     this.dishservice.putDish(this.dishcopy)
       .subscribe(dish => {
         this.dish = dish; this.dishcopy = dish;
